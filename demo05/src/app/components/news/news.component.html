@@ -1,0 +1,9 @@
+<p>news works!</p>
+<ul>
+  <li *ngFor="let item of info, let key = index">
+    {{key}}--- {{item.name}}---{{item.age}}
+    <a [routerLink]="[ '/newscontent' ]" [queryParams]="{id:key}">新闻详情</a>
+  </li>
+</ul>
+<button (click)="goNewsContent()">jsget传值跳转</button>
+

@@ -1,0 +1,10 @@
+<div class="search">
+  <input type="text" placeholder="搜索" [(ngModel)]="searchData" (keydown)='down($event)'>
+  <button>搜索</button>
+</div>
+<div class="list">
+  <h2>搜索记录</h2>
+  <ul>
+    <li *ngFor="let item of list,let i = index">{{item}} <a href="#" title="删除" (click)='delete(i)' >×</a> </li>
+  </ul>
+</div>

@@ -1,0 +1,19 @@
+header {
+  width: 100%;
+  height: 60px;
+  background-color: #ede3e7;
+
+}
+
+header a {
+
+  background-image: url('../../../assets/1logo.png');
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+header img {
+  float: right;
+  width: 100px;
+  height: 100px;
+}

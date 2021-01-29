@@ -1,0 +1,28 @@
+<p>我是home组件</p>
+<p>{{msg}}</p>
+<hr/>
+<p>
+{{user.name}}
+{{user.age}}
+</p>
+<br>
+<div [title]="msg">{{msg}}</div>
+<div [class]="myclass">{{msg}}</div>
+<div [innerHTML]="myHtml"></div>
+<div>
+  ngif
+</div>
+
+
+<div>ngClass</div>
+<div [ngClass]="{'red': flag}">我是ngclass控制的样式</div>
+<div>ngstyle</div>
+<div [ngStyle]="{'fontSize': '20px'}">ngstyle控制字体大小为20px</div>
+<div>管道{{toDay}}-----{{toDay | date:"YYYY-MM-dd HH:mm:ss"}}</div>
+<div>(click)='run()'</div>
+<button (click)="cli($event)">点击</button>
+<div>表单事件(keydown)="keydown()"</div>
+<div>事件对象(keydown)="keydown($event)"</div>
+<div>双向数据绑定</div>
+<input type="text" [(ngModel)]="data">
+<button (click)="setData()">改变data数据</button>

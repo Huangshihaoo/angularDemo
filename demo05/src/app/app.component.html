@@ -1,0 +1,7 @@
+<h1>app</h1>
+<a *ngFor="let item of items,let key = index" style="display: block;" [routerLink]="[ 'home/',key ]" routerLinkActive="active">home</a>
+<br/>
+<a routerLink="/news" routerLinkActive="active" >news</a>
+<button (click)="goHome()">js动态跳转</button>
+<button (click)="goNews()">js静态跳转</button>
+<router-outlet></router-outlet>

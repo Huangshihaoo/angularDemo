@@ -1,0 +1,23 @@
+<header>
+  <a href="#" class="logo">ToDoList</a>
+  <div class="add">
+    <input type="text" placeholder="添加ToDo" [(ngModel)]="incident" (keyup)='add($event)'>
+  </div>
+</header>
+<div class="main">
+  <ul class="course">
+    <h3>正在进行 <span class="num">{{courseNum}}</span> </h3>
+    <li *ngFor="let item of todoList" [hidden]="item.state"> <input type="checkbox" (change)='cheng(item.id)' [checked]='item.state'>
+      <p>{{item.incident}}</p><span (click)='dele(item.id)'>❎</span>
+    </li>
+  </ul>
+  <ul class="end">
+    <h3>已经完成 <span class="num">{{endNum}}</span></h3>
+    <li *ngFor="let item of todoList" [hidden]="!item.state"> <input type="checkbox" (change)='cheng(item.id)'  [checked]='item.state'>
+      <p>{{item.incident}}</p><span (click)='dele(item.id)'>❎</span>
+    </li>
+  </ul>
+  <footer>
+    <p>Copyright&nbsp;&nbsp;©&nbsp;&nbsp;2021&nbsp;&nbsp;ToDoList&nbsp;&nbsp;Huang</p>
+  </footer>
+</div>
